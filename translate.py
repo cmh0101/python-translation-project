@@ -77,7 +77,7 @@ def get_reverse(sequence):
     """
        
     get_reverse = sequence[::-1]
-    return get_reverse
+    return get_reverse.upper()
 
 def get_complement(sequence):
     """Get the complement of a `sequence` of nucleotides.
