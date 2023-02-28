@@ -78,7 +78,7 @@ def get_all_translations(rna_sequence, genetic_code):
     last_first_base_index = num_base - 3
 
     polypeptide_list = []
-    for i in range(last_first_base_index):
+    for i in range(last_first_base_index + 1):
         i_end = i + 3
         next_three = rna_sequence[i:i_end]
         if next_three == 'AUG':
