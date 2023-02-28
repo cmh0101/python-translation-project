@@ -74,6 +74,7 @@ def get_all_translations(rna_sequence, genetic_code):
         A list of strings; each string is an sequence of amino acids encoded by
         `rna_sequence`.
     """
+    rna_sequence = rna_sequence.upper()
     num_base = len(rna_sequence)
     last_first_base_index = num_base - 3
 
