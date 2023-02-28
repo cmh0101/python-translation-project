@@ -74,7 +74,17 @@ def get_all_translations(rna_sequence, genetic_code):
         A list of strings; each string is an sequence of amino acids encoded by
         `rna_sequence`.
     """
-    pass
+    num_base = len(rna_sequence)
+    last_first_base_index = num_base - 3
+
+    polypeptide_list = []
+    for i in range(last_first_base_index):
+        i_end = i + 3
+        next_three = rna_sequence[i:i_end]
+        if next_three == 'AUG':
+            polypeptide = translate_sequence(rna_sequence[i:], genetic_code)
+            polypeptide_list.append(polypeptide)
+    return polypeptide_list
 
 def get_reverse(sequence):
     """Reverse orientation of `sequence`.
