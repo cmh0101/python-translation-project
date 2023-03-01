@@ -174,10 +174,10 @@ def get_longest_peptide(rna_sequence, genetic_code):
     rna_array = get_all_translations(rna_sequence, genetic_code)
     
     maxl = -1
-    longest = ""
+    longest = ''
     index = -1    
 
-    for i in range(len(rna_array) - 1):
+    for i in range(len(rna_array)):
     	test = len(rna_array[i])
     	if test > maxl: 
            maxl = test
