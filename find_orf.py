@@ -57,8 +57,8 @@ def vet_nucleotide_sequence(sequence):
     # any valid RNA and DNA sequence strings, respectively (and only strings of
     # RNA and DNA bases).
     # Read the docstring above for additional clues.
-    rna_pattern_str = r'[AUCGaucg]'
-    dna_pattern_str = r'[ATCGatcg]'
+    rna_pattern_str = (r'[AUCGaucg]{0,100}')
+    dna_pattern_str = (r'[ATCGatcg]{0,100}')
     ##########################################################################
 
     rna_pattern = re.compile(rna_pattern_str)
