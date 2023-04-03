@@ -209,15 +209,8 @@ def find_first_orf(sequence,
     # exactly. Change `orf_pattern_str` so that it will match any open reading
     # frame.
     # Read the docstring above for additional clues.
+
     orf_pattern_str = r"(?:" + "|".join(start_codons) + ")" + r"(?:[AUGC]{3})*?" + r"(?:" + "|".join(stop_codons) + ")"
-
-#def find_first_orf(sequence,
-#        start_codons = ['AUG'],
-#        stop_codons = ['UAA', 'UAG', 'UGA'])
-
-##find_first_orf('CCAUGGUAUAACC', ['AUG'], ['UAA'])
-#orf_pattern_str = r'(^(([aug]|[AUG]){3,3})*)((([UAG]|[uag]){3,3})$)' 
-#    orf_pattern_str = r'(?=^(AUG|aug(?:...)*?)(?=[UAG|uag]{3,3}$)'
 
    ##########################################################################
 
