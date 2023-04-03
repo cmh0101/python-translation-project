@@ -209,7 +209,7 @@ def find_first_orf(sequence,
     # exactly. Change `orf_pattern_str` so that it will match any open reading
     # frame.
     # Read the docstring above for additional clues.
-    orf_pattern_str = r"(?i)({start_codons})[a-z]*({stop_codons})".format(start_codons="|".join(start_codons), stop_codons="|".join(stop_codons))
+    orf_pattern_str = r"(?:" + "|".join(start_codons) + ")" + r"(?:[AUGC]{3})*?" + r"(?:" + "|".join(stop_codons) + ")"
 
 #def find_first_orf(sequence,
 #        start_codons = ['AUG'],
