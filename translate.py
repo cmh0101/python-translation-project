@@ -2,6 +2,11 @@
 
 import sys
 
+
+
+#testing 
+
+
 def translate_sequence(rna_sequence, genetic_code):
     """Translates a sequence of RNA into a sequence of amino acids.
 
